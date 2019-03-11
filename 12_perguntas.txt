@@ -1,0 +1,7 @@
+criar perguntas:
+	{Escopo, D.C.U., E.C.U., D. Classes, M.E.R., D. Sequência, Protótipo}
+
+analisar requisito:
+
+
+enviar resultados pelo aprender:
