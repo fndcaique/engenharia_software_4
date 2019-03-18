@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package triangulo;
+package triangulo.model;
 
 /**
  *
@@ -46,10 +46,13 @@ public class Triangulo {
         return "";
     }
 
-    public boolean isValido() {
-        return (l1 > 0 && l2 > 0 && l3 > 0) && (l1 + l2 >= l3 && l1 + l3 >= l2 && l2 + l3 >= l1);
+    public boolean checkSoma() {
+        return (l1 + l2 >= l3 && l1 + l3 >= l2 && l2 + l3 >= l1);
     }
 
+    public boolean isValido(){
+        return (l1 > 0 && l2 > 0 && l3 > 0);
+    }
     public int getL1() {
         return l1;
     }
