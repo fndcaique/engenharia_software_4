@@ -5,8 +5,6 @@
  */
 package triangulo.model;
 
-import jdk.nashorn.internal.objects.NativeArray;
-
 /**
  *
  * @author fndcaique
@@ -35,26 +33,23 @@ public class Triangulo {
         this.l3 = l3;
     }
 
-    public String getTipo() {
-        if (checkValues() && checkSoma()) {
-            if (l1 == l2 && l1 == l3) {
-                return Tipo.EQUILATERO.name();
-            } else if (l1 != l2 && l1 != l3 && l2 != l3) {
-                return Tipo.ESCALENO.name();
-            } else {
-                return Tipo.ISOSCELES.name();
-            }
+    public String getType() {
+        if (l1 == l2 && l1 == l3) {
+            return Tipo.EQUILATERO.name();
+        } else if (l1 != l2 && l1 != l3 && l2 != l3) {
+            return Tipo.ESCALENO.name();
         }
-        return "";
+        return Tipo.ISOSCELES.name();
     }
 
-    public boolean checkSoma() {
+    public boolean checkSum() {
         return (l1 + l2 >= l3 && l1 + l3 >= l2 && l2 + l3 >= l1);
     }
 
-    public boolean checkValues(){
+    public boolean checkValues() {
         return (l1 > 0 && l2 > 0 && l3 > 0);
     }
+
     public int getL1() {
         return l1;
     }

@@ -42,7 +42,7 @@ public class TUnitario {
     @FileParameters("teste_tipo.csv")
     public void VerificarTipo(int l1, int l2, int l3, String resultado) {
         Triangulo t = new Triangulo(l1, l2, l3);
-        Assert.assertEquals(resultado, t.getTipo());
+        Assert.assertEquals(resultado, t.getType());
 
     }
 
@@ -58,7 +58,7 @@ public class TUnitario {
     @FileParameters("teste_soma.csv")
     public void verificarSoma(int l1, int l2, int l3, boolean resultado) {
         Triangulo t = new Triangulo(l1, l2, l3);
-        Assert.assertEquals(resultado, t.checkSoma());
+        Assert.assertEquals(resultado, t.checkSum());
     }
 
 }

@@ -18,8 +18,8 @@ public class CtrlTriangulo {
     public String verificar(int l1, int l2, int l3) {
         tri = new Triangulo(l1, l2, l3);
         if (tri.checkValues()) {
-            if (tri.checkSoma()) {
-                return tri.getTipo();
+            if (tri.checkSum()) {
+                return tri.getType();
             }
             return "-1";
         }
